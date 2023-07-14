@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:razanafis_ui/home.dart';
+import 'package:razanafis_ui/root.dart';
 import 'package:razanafis_ui/settings.dart';
 
 import 'login.dart';
@@ -74,7 +76,7 @@ class _UserAccountState extends State<UserAccount> {
                 ),
                 onTap: () {
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => UserLogin()),
+                    MaterialPageRoute(builder: (context) => Root()),
                   );
                 },
               ),

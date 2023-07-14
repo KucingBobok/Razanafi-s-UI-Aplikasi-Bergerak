@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:razanafis_ui/login.dart';
+import 'package:razanafis_ui/search.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -24,49 +25,22 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      bottomNavigationBar: GNav(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        gap: 10,
-        onTabChange: (tabNumb) {},
-        tabs: [
-          GButton(
-            icon: Icons.home,
-            text: 'Home',
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const Home()));
-            },
-          ),
-          GButton(
-            icon: Icons.search,
-            text: 'Search',
-          ),
-          GButton(
-            icon: Icons.account_circle,
-            text: 'Me',
-            onPressed: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const UserLogin()));
-            },
-          ),
-        ],
-      ),
     );
   }
+}
 
-  header(context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Text(
-          "UTS UI Razanafi",
-          style: TextStyle(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
-          ),
+header(context) {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: const [
+      Text(
+        "Razanafi's App",
+        style: TextStyle(
+          fontSize: 40,
+          fontWeight: FontWeight.bold,
         ),
-        Text("Ini adalah tugas Aplikasi Bergerak")
-      ],
-    );
-  }
+      ),
+      Text("Ini adalah tugas Aplikasi Bergerak")
+    ],
+  );
 }
